@@ -93,8 +93,10 @@ class CategorieViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAdminOrReadOnly | IsSuperuser,)
 
 
-class CreateListDestroyMixin(mixins.CreateModelMixin, mixins.ListModelMixin,
-                   mixins.DestroyModelMixin, viewsets.GenericViewSet):
+class CreateListDestroyMixin(mixins.CreateModelMixin,
+                             mixins.ListModelMixin,
+                             mixins.DestroyModelMixin,
+                             viewsets.GenericViewSet):
     pass
 
 
@@ -137,8 +139,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         title_id = self.kwargs['title_id']
-        reviews = Review.objects.filter(title=title_id).order_by('id')
-        return reviews
+        return Review.objects.filter(title=title_id).order_by('id')
 
     def perform_create(self, serializer):
         title_id = self.kwargs['title_id']
@@ -157,8 +158,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         review_id = self.kwargs['review_id']
-        comments = Comment.objects.filter(review=review_id).order_by('id')
-        return comments
+        return Comment.objects.filter(review=review_id).order_by('id')
 
     def perform_create(self, serializer):
         title_id = self.kwargs['title_id']
