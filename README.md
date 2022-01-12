@@ -52,7 +52,7 @@ scp ./<FILENAME> <USER>@<HOST>:/home/<USER>/yamdb_final/
 * DOCKER_PASSWORD, DOCKER_USERNAME - для загрузки и скачивания образа с DockerHub 
 * USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу 
 * TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
-
+* DB_ENGINE, DB_NAME, POSTGRES_USER, POSTGRES_PASSWORD, DB_HOST, DB_PORT - данные для создания базы данных.
 ### Развертывание приложения
 
 1. При пуше в ветку main приложение пройдет тесты, обновит образ на DockerHub и сделает деплой на сервер. Дальше необходимо подлкючиться к серверу.
@@ -79,10 +79,8 @@ Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 
 ## Авторы
 
-* **Evgenii Katolichenko** - автор, студент курса Python-разработчик в Яндекс.Практикум. Это учебный проект.
-Если есть вопросы или пожелания по проекту пишите на почту - evg.katolichenko@gmail.com
-
-Список [разработчиков](https://github.com/goglogige/api_yamdb/graphs/contributors) принимавших участие в проекте.
+* **Firzat Mannanov** - автор, студент курса Python-разработчик в Яндекс.Практикум. Это учебный проект.
+Если есть вопросы или пожелания по проекту пишите на почту - fmannanov01@gmail.com
 
 ## Благодарности
 
